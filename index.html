@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Terminale</title>
+	<link rel="stylesheet" href="style.css">
+
+    <script>
+        function openFilePage() {
+          var input = document.querySelector('input[type="text"]');
+          if (input.value === "file1.txt") {
+            window.location.href = "ciao.html";
+          }
+        }
+      
+        var inputField = document.querySelector('input[type="text"]');
+        inputField.addEventListener("keyup", function(event) {
+          if (event.keyCode === 13) {
+            event.preventDefault();
+            openFilePage();
+          }
+        });
+      </script>
+      
+</head>
+<body>
+	<div class="console">
+		<div class="output">
+			<p>
+				<span class="username">user@computer:~$</span>
+				<span class="command">ls</span>
+			</p>
+			<p>file1.txt file2.txt</p>
+		</div>
+		<div class="input">
+			<p>
+				<span class="username">user@computer:~$</span>
+				<input type="text" placeholder="Inserisci un comando...">
+			</p>
+		</div>
+	</div>
+</body>
+</html>
